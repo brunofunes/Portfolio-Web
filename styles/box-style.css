@@ -1,0 +1,11 @@
+#container .info {
+  border-radius: 25px;
+  background: #d8d8d8;
+  box-shadow: inset 5px 5px 10px #c7c7c7, inset -5px -5px 10px #e9e9e9;
+}
+
+#container .press {
+  border-radius: 25px;
+  background: #d8d8d8;
+  box-shadow: 5px 5px 10px #c7c7c7, -5px -5px 10px #e9e9e9;
+}

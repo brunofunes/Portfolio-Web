@@ -1,0 +1,37 @@
+body {
+  background: #d8d8d8;
+}
+
+#container {
+  margin: auto;
+  padding: 16px 0px;
+  height: max-content;
+  width: 40%;
+  min-width: 600px;
+  /* background-color: rgb(204, 101, 101); */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+#container * {
+  background-color: darkgray;
+  border: 0px black solid;
+  border-radius: 16px;
+}
+
+#about-me {
+  grid-row-start: span 2;
+  grid-column-start: span 3;
+}
+
+#projects {
+  grid-row-start: span 2;
+  grid-column-start: span 3;
+}
+
+#tecnologias {
+  grid-row-start: span 2;
+  grid-column-start: span 2;
+}
