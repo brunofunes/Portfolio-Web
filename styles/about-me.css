@@ -1,0 +1,30 @@
+#about-me {
+  padding: 32px;
+  display: flex;
+  gap: 40px;
+
+  img {
+    height: 100%;
+    border-radius: 16px;
+    filter: grayscale(80%);
+    transform: scale(1);
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  img:hover {
+    filter: grayscale(0%);
+    height: 100%;
+    transform: scale(1.03);
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: var(--dark-color);
+  }
+
+  p {
+    font-size: 1rem;
+    text-wrap: wrap;
+    color: var(--dark-color);
+  }
+}

@@ -4,18 +4,19 @@ body {
 
 #container {
   margin: auto;
+  justify-content: center;
   padding: 16px 0px;
   height: max-content;
-  width: 40%;
+  width: max-content;
   min-width: 600px;
   /* background-color: rgb(204, 101, 101); */
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 160px));
+  grid-template-rows: repeat(6, minmax(0, 160px));
 }
 
-#container * {
+#container > * {
   background-color: darkgray;
   border: 0px black solid;
   border-radius: 16px;
