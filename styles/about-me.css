@@ -9,6 +9,7 @@
     filter: grayscale(80%);
     transform: scale(1);
     transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: crosshair;
   }
 
   img:hover {
