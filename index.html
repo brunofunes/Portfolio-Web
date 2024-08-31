@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="styles/icons-styles.css" />
     <link rel="stylesheet" href="styles/tecnologias.css" />
     <link rel="stylesheet" href="styles/proyectos.css" />
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/clima.css" />
+    <script src="app.js" type="module"></script>
   </head>
   <body>
     <div id="container">
@@ -26,14 +27,14 @@
           </p>
         </div>
       </section>
-      <button id="lenguaje-mode" class="cuadrado press">ES / EN</button>
-      <button id="mode" class="cuadrado press">
+      <button id="lenguaje-mode" class="cuadrado press effect">ES / EN</button>
+      <button id="mode" class="cuadrado press effect">
         <img class="moon" src="assets/dark-mode.svg" alt="dark-mode" />
         <img class="sun oculto" src="assets/light-mode.svg" alt="dark-mode" />
       </button>
       <a
         id="github"
-        class="cuadrado press"
+        class="cuadrado press effect"
         href="https://github.com/brunofunes"
         target="_blank"
         ><img src="assets/github.svg" alt="img-github"
@@ -47,7 +48,12 @@
               Un sitio web para retar y mejorar mis habilidades con varios
               ejercicios en JavaScript.
             </p>
-            <img src="assets/open.svg" alt="" />
+            <a
+              href="https://brunofunes.github.io/jspractice.github.io/"
+              target="_blank"
+            >
+              <img src="assets/open.svg" alt="img-open-project" />
+            </a>
           </div>
           <div class="proximamente">Pronto...</div>
           <div class="proximamente">Pronto...</div>
@@ -55,7 +61,7 @@
       </section>
       <a
         id="linkedin"
-        class="cuadrado press"
+        class="cuadrado press effect"
         href="https://www.linkedin.com/in/brunofunes/"
         target="_blank"
       >
@@ -88,13 +94,16 @@
       </section>
       <a
         id="e-mail"
-        class="cuadrado press"
+        class="cuadrado press effect"
         href="mailto:brunoo.funes@hotmail.com"
       >
         <img src="assets/mail.svg" alt="img-mail" />
       </a>
-      <section id="api-clima" class="cuadrado info"></section>
+      <section id="api-clima" class="cuadrado info">
+        <img id="icono-clima" src="" alt="" />
+        <h3 id="valor-temp"></h3>
+        <h4 id="ubicacion"></h4>
+      </section>
     </div>
-    <div class="loader"></div>
   </body>
 </html>

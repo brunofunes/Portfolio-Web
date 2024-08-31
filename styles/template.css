@@ -11,7 +11,7 @@ body {
   min-width: 600px;
   /* background-color: rgb(204, 101, 101); */
   display: grid;
-  gap: 16px;
+  gap: 1rem;
   grid-template-columns: repeat(4, minmax(0, 160px));
   grid-template-rows: repeat(6, minmax(0, 160px));
 }

@@ -1,0 +1,22 @@
+#api-clima {
+  height: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  #valor-temp {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  #icono-clima {
+    width: 5rem;
+  }
+
+  #ubicacion {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
