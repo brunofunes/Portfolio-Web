@@ -1,10 +1,10 @@
 window.addEventListener("load", () => {
   // DOM Elements
-
   let $valorTemp = document.getElementById("valor-temp");
   let $iconoClima = document.getElementById("icono-clima");
   let $ubicacion = document.getElementById("ubicacion");
 
+  //api openweathermap
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((poss) => {
       let lat = poss.coords.latitude;
@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
           //Obtener icon animado
           switch (data.weather[0].main) {
             case "Clear":
-              $iconoClima.src = "animated/day.scg";
+              $iconoClima.src = "animated/day.svg";
               break;
             case "Clouds":
               $iconoClima.src = "animated/cloudy.svg";
@@ -58,4 +58,24 @@ window.addEventListener("load", () => {
         });
     });
   }
+
+  //Dark Mode
+  let $body = document.getElementById("body");
+  let $btnMode = document.getElementById("mode");
+  let $moon = document.getElementById("moon");
+  let $sun = document.getElementById("sun");
+
+  //Evento para cambiar la imagen sol/luna y aplicar estilos
+  $btnMode.addEventListener("click", () => {
+    if ($sun.classList.contains("oculto")) {
+      $sun.classList.remove("oculto");
+      $moon.classList.add("oculto");
+      $body.classList.add("dark");
+    } else {
+      $moon.classList.remove("oculto");
+      $sun.classList.add("oculto");
+      $body.classList.remove("dark");
+    }
+  });
+
 });

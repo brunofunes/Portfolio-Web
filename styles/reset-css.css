@@ -12,4 +12,5 @@
 :root {
   --dark-color: #242424; /* Variable para el color principal */
   --light-color: #e2e2e2; /* Variable para el color secundario */
+  --dark-color: #353535; /* Variable para el DarkMode */
 }

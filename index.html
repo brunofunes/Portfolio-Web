@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="styles/tecnologias.css" />
     <link rel="stylesheet" href="styles/proyectos.css" />
     <link rel="stylesheet" href="styles/clima.css" />
+    <link rel="stylesheet" href="styles/dark-style.css" />
     <script src="app.js" type="module"></script>
   </head>
-  <body>
+  <body id="body" class="">
     <div id="container">
       <section id="about-me" class="info">
         <img src="assets/foto-perfil.png" alt="" />
@@ -29,8 +30,18 @@
       </section>
       <button id="lenguaje-mode" class="cuadrado press effect">ES / EN</button>
       <button id="mode" class="cuadrado press effect">
-        <img class="moon" src="assets/dark-mode.svg" alt="dark-mode" />
-        <img class="sun oculto" src="assets/light-mode.svg" alt="dark-mode" />
+        <img
+          id="moon"
+          class="moon"
+          src="assets/dark-mode.svg"
+          alt="dark-mode"
+        />
+        <img
+          id="sun"
+          class="sun oculto"
+          src="assets/light-mode.svg"
+          alt="dark-mode"
+        />
       </button>
       <a
         id="github"
