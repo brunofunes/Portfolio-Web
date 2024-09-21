@@ -8,7 +8,7 @@ body {
   justify-content: center;
   padding: 2rem 0px;
   width: fit-content;
-  height: fit-content;
+  height: min-content;
   /* background-color: rgb(204, 101, 101); */
   display: grid;
   gap: 1rem;
@@ -39,7 +39,6 @@ body {
 
 @media (min-width: 0px) and (max-width: 900px) {
   #container {
-    grid-template-columns: repeat(4, minmax(0, 190px));
     grid-template-rows: repeat(6, minmax(0, 180px));
     padding: 2rem 2rem;
   }
@@ -63,19 +62,7 @@ body {
     grid-row: -5;
   }
 
-  #ingles {
-    grid-column: ;
-    grid-row: ;
-  }
-  #portuges {
-    grid-column: ;
-    grid-row: ;
-  }
-  #api-clima {
-    grid-column: ;
-    grid-row: ;
-  }
-
-  #container .cuadrado {
+  #container {
+    height: min-content;
   }
 }
