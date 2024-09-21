@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/proyectos.css" />
     <link rel="stylesheet" href="styles/clima.css" />
     <link rel="stylesheet" href="styles/dark-style.css" />
+    <link rel="stylesheet" href="styles/leng-style.css" />
     <script src="app.js" type="module"></script>
   </head>
   <body id="body" class="">
@@ -51,11 +52,11 @@
         ><img src="assets/github.svg" alt="img-github"
       /></a>
       <section id="projects" class="info">
-        <h3>Proyectos</h3>
+        <h3 id="projectsTitle">Proyectos</h3>
         <div id="card-container">
           <div class="press">
-            <h4>"JS PRÁCTICA"</h4>
-            <p>
+            <h4 id="project1Title">"JS PRÁCTICA"</h4>
+            <p id="project1Desc">
               Un sitio web para retar y mejorar mis habilidades con varios
               ejercicios en JavaScript.
             </p>
@@ -66,8 +67,8 @@
               <img src="assets/open.svg" alt="img-open-project" />
             </a>
           </div>
-          <div class="proximamente">Pronto...</div>
-          <div class="proximamente">Pronto...</div>
+          <div class="proximamente" id="comingSoon">Pronto...</div>
+          <div class="proximamente" id="comingSoon1">Pronto...</div>
         </div>
       </section>
       <a
@@ -79,7 +80,7 @@
         <img src="assets/linkedin.svg" alt="img-linkedin"
       /></a>
       <section id="tecnologias" class="info">
-        <h3>Habilidades</h3>
+        <h3 id="skillsTitle">Habilidades</h3>
         <div id="tec-container">
           <img src="assets/html.svg" alt="html" title="HTML" />
           <img src="assets/css.svg" alt="css" title="CSS" />
@@ -96,12 +97,12 @@
         </div>
       </section>
       <section id="ingles" class="cuadrado info">
-        <h2>Inglés</h2>
-        <p>INTERMEDIO</p>
+        <h2 id="englishTitle">Inglés</h2>
+        <p id="englishLevel">INTERMEDIO</p>
       </section>
       <section id="portuges" class="cuadrado info">
-        <h2>Portugués</h2>
-        <p>AVANZADO</p>
+        <h2 id="portugueseTitle">Portugués</h2>
+        <p id="portugueseLevel">AVANZADO</p>
       </section>
       <a
         id="e-mail"
@@ -109,7 +110,7 @@
         href="mailto:brunoo.funes@hotmail.com"
       >
         <img src="assets/mail.svg" alt="img-mail" />
-        <h3>Contáctame!</h3>
+        <h3 id="contactMe">Contáctame!</h3>
       </a>
       <section id="api-clima" class="cuadrado info">
         <img id="icono-clima" src="" alt="" />

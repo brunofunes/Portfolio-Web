@@ -1,4 +1,6 @@
 window.addEventListener("load", () => {
+  //---------------------Api Clima---------------------
+
   // DOM Elements
   let $valorTemp = document.getElementById("valor-temp");
   let $iconoClima = document.getElementById("icono-clima");
@@ -59,11 +61,12 @@ window.addEventListener("load", () => {
     });
   }
 
-  //Dark Mode
-  let $body = document.getElementById("body");
-  let $btnMode = document.getElementById("mode");
-  let $moon = document.getElementById("moon");
-  let $sun = document.getElementById("sun");
+  //---------------------Dark Mode---------------------
+  // DOM Elements
+  const $body = document.getElementById("body");
+  const $btnMode = document.getElementById("mode");
+  const $moon = document.getElementById("moon");
+  const $sun = document.getElementById("sun");
 
   //Evento para cambiar la imagen sol/luna y aplicar estilos
   $btnMode.addEventListener("click", () => {
@@ -78,4 +81,90 @@ window.addEventListener("load", () => {
     }
   });
 
+  //---------------------Lang Mode---------------------
+  // DOM Elements
 });
+const $btnLang = document.getElementById("lenguaje-mode");
+if (localStorage.getItem("lenguaje") === null) {
+  localStorage.setItem("lenguaje", "es");
+}
+
+// Funcion para cambiar el lenguaje
+function changeLeng() {
+  if (localStorage.getItem("lenguaje") === "es") {
+    document.getElementById("greeting").textContent = "Hello!";
+    document.getElementById("intro").innerHTML =
+      "I'm <strong>Bruno</strong>, a self-taught student in ongoing training, with knowledge in various Backend areas, but specialized in <strong>Frontend</strong>. I'm excited to keep learning and collaborate on challenging projects.";
+    document.getElementById("projectsTitle").textContent = "Projects";
+    document.getElementById("project1Title").textContent = '"JS PRACTICE"';
+    document.getElementById("project1Desc").textContent =
+      "A website to challenge and improve my skills with various JavaScript exercises.";
+    document.getElementById("comingSoon").textContent = "Coming soon...";
+    document.getElementById("comingSoon1").textContent = "Coming soon...";
+    document.getElementById("skillsTitle").textContent = "Skills";
+    document.getElementById("englishTitle").textContent = "English";
+    document.getElementById("englishLevel").textContent = "INTERMEDIATE";
+    document.getElementById("portugueseTitle").textContent = "Portuguese";
+    document.getElementById("portugueseLevel").textContent = "ADVANCED";
+    document.getElementById("contactMe").textContent = "Contact me!";
+    localStorage.setItem("lenguaje", "en");
+  } else {
+    document.getElementById("greeting").textContent = "Hola!";
+    document.getElementById("intro").innerHTML =
+      "Soy <strong>Bruno</strong> un estudiante autodidacta en constante capacitación, con conocimientos en diversas áreas de Backend, pero especializado en <strong>Frontend</strong>. Estoy entusiasmado por seguir aprendiendo y colaborar en proyectos desafiantes.";
+    document.getElementById("projectsTitle").textContent = "Proyectos";
+    document.getElementById("project1Title").textContent = '"JS PRÁCTICA"';
+    document.getElementById("project1Desc").textContent =
+      "Un sitio web para retar y mejorar mis habilidades con varios ejercicios en JavaScript.";
+    document.getElementById("comingSoon").textContent = "Pronto...";
+    document.getElementById("comingSoon1").textContent = "Pronto...";
+    document.getElementById("skillsTitle").textContent = "Habilidades";
+    document.getElementById("englishTitle").textContent = "Inglés";
+    document.getElementById("englishLevel").textContent = "INTERMEDIO";
+    document.getElementById("portugueseTitle").textContent = "Portugués";
+    document.getElementById("portugueseLevel").textContent = "AVANZADO";
+    document.getElementById("contactMe").textContent = "Contáctame!";
+    localStorage.setItem("lenguaje", "es");
+  }
+}
+
+$btnLang.addEventListener("click", () => {
+  changeLeng();
+});
+
+window.onload = () => {
+  if (localStorage.getItem("lenguaje") === "en") {
+    document.getElementById("greeting").textContent = "Hello!";
+    document.getElementById("intro").innerHTML =
+      "I'm <strong>Bruno</strong>, a self-taught student in ongoing training, with knowledge in various Backend areas, but specialized in <strong>Frontend</strong>. I'm excited to keep learning and collaborate on challenging projects.";
+    document.getElementById("projectsTitle").textContent = "Projects";
+    document.getElementById("project1Title").textContent = '"JS PRACTICE"';
+    document.getElementById("project1Desc").textContent =
+      "A website to challenge and improve my skills with various JavaScript exercises.";
+    document.getElementById("comingSoon").textContent = "Coming soon...";
+    document.getElementById("comingSoon1").textContent = "Coming soon...";
+    document.getElementById("skillsTitle").textContent = "Skills";
+    document.getElementById("englishTitle").textContent = "English";
+    document.getElementById("englishLevel").textContent = "INTERMEDIATE";
+    document.getElementById("portugueseTitle").textContent = "Portuguese";
+    document.getElementById("portugueseLevel").textContent = "ADVANCED";
+    document.getElementById("contactMe").textContent = "Contact me!";
+  } else {
+    document.getElementById("greeting").textContent = "Hola!";
+    document.getElementById("intro").innerHTML =
+      "Soy <strong>Bruno</strong> un estudiante autodidacta en constante capacitación, con conocimientos en diversas áreas de Backend, pero especializado en <strong>Frontend</strong>. Estoy entusiasmado por seguir aprendiendo y colaborar en proyectos desafiantes.";
+    document.getElementById("projectsTitle").textContent = "Proyectos";
+    document.getElementById("project1Title").textContent = '"JS PRÁCTICA"';
+    document.getElementById("project1Desc").textContent =
+      "Un sitio web para retar y mejorar mis habilidades con varios ejercicios en JavaScript.";
+    document.getElementById("comingSoon").textContent = "Pronto...";
+    document.getElementById("comingSoon1").textContent = "Pronto...";
+    document.getElementById("skillsTitle").textContent = "Habilidades";
+    document.getElementById("englishTitle").textContent = "Inglés";
+    document.getElementById("englishLevel").textContent = "INTERMEDIO";
+    document.getElementById("portugueseTitle").textContent = "Portugués";
+    document.getElementById("portugueseLevel").textContent = "AVANZADO";
+    document.getElementById("contactMe").textContent = "Contáctame!";
+    localStorage.setItem("lenguaje", "es");
+  }
+};
