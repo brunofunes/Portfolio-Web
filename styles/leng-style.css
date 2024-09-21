@@ -1,0 +1,8 @@
+#lenguaje-mode {
+}
+
+.big {
+  font-size: 2.5rem;
+  font-weight: 500;
+  transition: font-size 0.2s ease-in-out;
+}

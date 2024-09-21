@@ -85,6 +85,9 @@ window.addEventListener("load", () => {
   // DOM Elements
 });
 const $btnLang = document.getElementById("lenguaje-mode");
+const $spanES = document.getElementById("es");
+const $spanEN = document.getElementById("en");
+
 if (localStorage.getItem("lenguaje") === null) {
   localStorage.setItem("lenguaje", "es");
 }
@@ -108,6 +111,8 @@ function changeLeng() {
     document.getElementById("portugueseLevel").textContent = "ADVANCED";
     document.getElementById("contactMe").textContent = "Contact me!";
     localStorage.setItem("lenguaje", "en");
+    $spanES.classList.remove("big");
+    $spanEN.classList.add("big");
   } else {
     document.getElementById("greeting").textContent = "Hola!";
     document.getElementById("intro").innerHTML =
@@ -125,6 +130,8 @@ function changeLeng() {
     document.getElementById("portugueseLevel").textContent = "AVANZADO";
     document.getElementById("contactMe").textContent = "Contáctame!";
     localStorage.setItem("lenguaje", "es");
+    $spanES.classList.add("big");
+    $spanEN.classList.remove("big");
   }
 }
 
@@ -149,6 +156,8 @@ window.onload = () => {
     document.getElementById("portugueseTitle").textContent = "Portuguese";
     document.getElementById("portugueseLevel").textContent = "ADVANCED";
     document.getElementById("contactMe").textContent = "Contact me!";
+    $spanES.classList.remove("big");
+    $spanEN.classList.add("big");
   } else {
     document.getElementById("greeting").textContent = "Hola!";
     document.getElementById("intro").innerHTML =
@@ -166,5 +175,7 @@ window.onload = () => {
     document.getElementById("portugueseLevel").textContent = "AVANZADO";
     document.getElementById("contactMe").textContent = "Contáctame!";
     localStorage.setItem("lenguaje", "es");
+    $spanES.classList.add("big");
+    $spanEN.classList.remove("big");
   }
 };
