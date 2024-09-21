@@ -21,7 +21,7 @@
   .texto {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
 
     h1 {
       font-size: 3rem;

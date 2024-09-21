@@ -5,13 +5,13 @@
   #container .info {
     border-radius: 25px;
     background: var(--dark-color);
-    box-shadow: inset 3px 3px 5px #2d2d2d, inset -3px -3px 5px #3d3d3d;
+    box-shadow: inset 3px 3px 5px #292929, inset -3px -3px 5px #3d3d3d;
   }
 
   #container .press {
     border-radius: 25px;
     background: var(--dark-color);
-    box-shadow: 3px 3px 5px #222222, -3px -3px 5px #3d3d3d;
+    box-shadow: 3px 3px 5px #292929, -3px -3px 5px #3d3d3d;
     cursor: pointer;
   }
 
@@ -19,7 +19,7 @@
     & #card-container {
       div {
         background: var(--dark-color);
-        box-shadow: 2px 2px 5px #222222, -2px -2px 5px #3d3d3d;
+        box-shadow: 2px 2px 5px #292929, -2px -2px 5px #3d3d3d;
       }
     }
   }
