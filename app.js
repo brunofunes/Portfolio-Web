@@ -60,30 +60,47 @@ window.addEventListener("load", () => {
         });
     });
   }
-
-  //---------------------Dark Mode---------------------
-  // DOM Elements
-  const $body = document.getElementById("body");
-  const $btnMode = document.getElementById("mode");
-  const $moon = document.getElementById("moon");
-  const $sun = document.getElementById("sun");
-
-  //Evento para cambiar la imagen sol/luna y aplicar estilos
-  $btnMode.addEventListener("click", () => {
-    if ($sun.classList.contains("oculto")) {
-      $sun.classList.remove("oculto");
-      $moon.classList.add("oculto");
-      $body.classList.add("dark");
-    } else {
-      $moon.classList.remove("oculto");
-      $sun.classList.add("oculto");
-      $body.classList.remove("dark");
-    }
-  });
-
-  //---------------------Lang Mode---------------------
-  // DOM Elements
 });
+//---------------------Dark Mode---------------------
+// DOM Elements
+const $body = document.getElementById("body");
+const $btnMode = document.getElementById("mode");
+const $moon = document.getElementById("moon");
+const $sun = document.getElementById("sun");
+
+if (localStorage.getItem("mode") === null) {
+  localStorage.setItem("mode", "light");
+}
+
+function toDark() {
+  if (localStorage.getItem("mode") === "light") {
+    $sun.classList.remove("oculto");
+    $moon.classList.add("oculto");
+    $body.classList.add("dark");
+    localStorage.setItem("mode", "dark");
+  }
+}
+
+function toLight() {
+  if (localStorage.getItem("mode") === "dark") {
+    $moon.classList.remove("oculto");
+    $sun.classList.add("oculto");
+    $body.classList.remove("dark");
+    localStorage.setItem("mode", "light");
+  }
+}
+
+//Evento para cambiar la imagen sol/luna y aplicar estilos
+$btnMode.addEventListener("click", () => {
+  if (localStorage.getItem("mode") === "light") {
+    toDark();
+  } else {
+    toLight();
+  }
+});
+
+//---------------------Lang Mode---------------------
+// DOM Elements
 const $btnLang = document.getElementById("lenguaje-mode");
 const $spanES = document.getElementById("es");
 const $spanEN = document.getElementById("en");
@@ -177,5 +194,11 @@ window.onload = () => {
     localStorage.setItem("lenguaje", "es");
     $spanES.classList.add("big");
     $spanEN.classList.remove("big");
+  }
+
+  if (localStorage.getItem("mode") === "dark") {
+    $sun.classList.remove("oculto");
+    $moon.classList.add("oculto");
+    $body.classList.add("dark");
   }
 };
