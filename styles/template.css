@@ -64,5 +64,6 @@ body {
 
   #container {
     height: min-content;
+    min-width: 600px;
   }
 }
