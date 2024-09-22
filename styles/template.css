@@ -37,7 +37,7 @@ body {
   grid-column-start: span 2;
 }
 
-@media (min-width: 0px) and (max-width: 900px) {
+@media (min-width: 0px) and (max-width: 1024px) {
   #container {
     grid-template-rows: repeat(6, minmax(0, 180px));
     padding: 2rem 2rem;
